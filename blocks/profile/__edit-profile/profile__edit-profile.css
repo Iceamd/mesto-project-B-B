@@ -1,0 +1,14 @@
+.profile__edit-profile {
+  grid-area: profile__edit-profile;
+  margin-top: 15px;
+}
+
+.profile__edit-profile:hover {
+  opacity: 0.6;
+}
+
+@media (max-width: 320px) {
+  .profile__edit-profile {
+    margin-top: 8px;
+  }
+}

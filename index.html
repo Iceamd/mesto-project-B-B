@@ -6,21 +6,98 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./pages/index.css">
-  <title>Путешествия по России</title>
+  <title>Место</title>
 </head>
 
 <body class="page">
+
   <header class="header">
-    <img class="header__logo" src="./images/header-logo.svg" alt="карта Рооссии">
-    <div class="header__lang-links">
-      <a href="#" class="header__lang-link header__lang-link_active link">Ru</a>
-      <a href="#" class="header__lang-link link">En</a>
-    </div>
+    <img class="header__logo logo" src="./images/Logo-white.svg" alt="Логотип Место">
+    <hr class="header__line">
   </header>
 
+  <section class="profile">
+    <img class="profile__avatar" alt="фото профиля" src="./images/Avatar.jpg">
+    <div class="profile__info">
+      <h1 class="profile__title">Жак-Ив Кусто</h1>
+      <h2 class="profile__subtitle">Исследователь океана</h2>
+    </div>
+    <button type="button" class="edit-profile profile__edit-profile">
+      <img src="./images/Edit-Button.svg" alt="Редактировать профиль" class="edit-profile__icon">
+    </button>
 
- 
+    <button type="button" class="add-button profile__add-button">
+      <img src="./images/Add-Button.svg" alt="Добавить" class="add-button__icon">
+    </button>
+  </section>
 
+  <section class="elements">
+
+    <div class="element">
+      <img class="element__foto" alt="замок" src="./images/lock.jpg">
+      <div class="element__item">
+        <p class="element__text">Карачаевск</p>
+        <div class="element__heart"></div>
+      </div>
+    </div>
+
+    <div class="element">
+      <img class="element__foto" alt="гора эльбрус" src="./images/Mountain-Elbrus.jpg">
+      <div class="element__item">
+        <p class="element__text">Гора Эльбрус</p>
+        <div class="element__heart"></div>
+      </div>
+    </div>
+
+    <div class="element">
+      <img class="element__foto" alt="домбай" src="./images/Dombai.jpg">
+      <div class="element__item">
+        <p class="element__text">Домбай</p>
+        <div class="element__heart"></div>
+      </div>
+    </div>
+
+    <div class="element">
+      <img class="element__foto" alt="гора эльбрус" src="./images/Mountain-Elbrus.jpg">
+      <div class="element__item">
+        <p class="element__text">Домбай</p>
+        <div class="element__heart"></div>
+      </div>
+    </div>
+
+    <div class="element">
+      <img class="element__foto" alt="домбай" src="./images/Dombai.jpg">
+      <div class="element__item">
+        <p class="element__text">Домбай</p>
+        <div class="element__heart"></div>
+      </div>
+    </div>
+
+    <div class="element">
+      <img class="element__foto" alt="замок" src="./images/lock.jpg">
+      <div class="element__item">
+        <p class="element__text">Карачаево-Ч...</p>
+        <div class="element__heart"></div>
+      </div>
+    </div>
+
+  </section>
+
+  <footer class="footer">
+    <p class="footer__copyright">&#64; 2020 Mesto Russia</p>
+  </footer>
+
+  <section class="popup popup__overlay">
+    <section class="popup__window">
+    <button class="popup__close-button"></button>
+    <form class="popup__form">
+      <h3 class="popup__title">Редактировать профиль</h3>
+				<input type="text" name="user-name" class="popup__user-name">
+				<input type="text" name="user-job" class="popup__user-job">
+				<button type="submit" class="popup__save-button">Сохранить</button>
+    </form>
+    </section>
+  </section>
 </body>
 
 </html>
