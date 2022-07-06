@@ -13,20 +13,19 @@
 
   <header class="header">
     <img class="header__logo logo" src="./images/Logo-white.svg" alt="Логотип Место">
-    <hr class="header__line">
   </header>
 
   <section class="profile">
     <img class="profile__avatar" alt="фото профиля" src="./images/Avatar.jpg">
     <div class="profile__info">
       <h1 class="profile__title">Жак-Ив Кусто</h1>
-      <h2 class="profile__subtitle">Исследователь океана</h2>
+      <p class="profile__subtitle">Исследователь океана</p>
     </div>
-    <button type="button" class="edit-profile profile__edit-profile">
+    <button type="button" class="edit-profile profile__edit-profile" aria-label="Редактировать">
       <img src="./images/Edit-Button.svg" alt="Редактировать профиль" class="edit-profile__icon">
     </button>
 
-    <button type="button" class="add-button profile__add-button">
+    <button type="button" class="add-button profile__add-button" aria-label="Добавить">
       <img src="./images/Add-Button.svg" alt="Добавить" class="add-button__icon">
     </button>
   </section>
@@ -36,48 +35,48 @@
     <div class="element">
       <img class="element__foto" alt="замок" src="./images/lock.jpg">
       <div class="element__item">
-        <p class="element__text">Карачаевск</p>
-        <div class="element__heart"></div>
+        <h2 class="element__text">Карачаевск</h2>
+        <button type="checkbox" class="element__heart element__heart-active" aria-label="нажать на сердце"></button>
       </div>
     </div>
 
     <div class="element">
       <img class="element__foto" alt="гора эльбрус" src="./images/Mountain-Elbrus.jpg">
       <div class="element__item">
-        <p class="element__text">Гора Эльбрус</p>
-        <div class="element__heart"></div>
+        <h2 class="element__text">Гора Эльбрус</h2>
+        <button type="checkbox" class="element__heart element__heart-active" aria-label="нажать на сердце"></button>
       </div>
     </div>
 
     <div class="element">
       <img class="element__foto" alt="домбай" src="./images/Dombai.jpg">
       <div class="element__item">
-        <p class="element__text">Домбай</p>
-        <div class="element__heart"></div>
+        <h2 class="element__text">Домбай</h2>
+        <button type="checkbox" class="element__heart element__heart-active" aria-label="нажать на сердце"></button>
       </div>
     </div>
 
     <div class="element">
       <img class="element__foto" alt="гора эльбрус" src="./images/Mountain-Elbrus.jpg">
       <div class="element__item">
-        <p class="element__text">Домбай</p>
-        <div class="element__heart"></div>
+        <h2 class="element__text">Домбай</h2>
+        <button type="checkbox" class="element__heart element__heart-active" aria-label="нажать на сердце"></button>
       </div>
     </div>
 
     <div class="element">
       <img class="element__foto" alt="домбай" src="./images/Dombai.jpg">
       <div class="element__item">
-        <p class="element__text">Домбай</p>
-        <div class="element__heart"></div>
+        <h2 class="element__text">Домбай</h2>
+        <button type="checkbox" class="element__heart element__heart-active" aria-label="нажать на сердце"></button>
       </div>
     </div>
 
     <div class="element">
       <img class="element__foto" alt="замок" src="./images/lock.jpg">
       <div class="element__item">
-        <p class="element__text">Карачаево-Ч...</p>
-        <div class="element__heart"></div>
+        <h2 class="element__text">Карачаево-Ч...</h2>
+        <button type="checkbox" class="element__heart element__heart-active" aria-label="нажать на сердце"></button>
       </div>
     </div>
 
@@ -87,16 +86,16 @@
     <p class="footer__copyright">&#64; 2020 Mesto Russia</p>
   </footer>
 
-  <section class="popup popup__overlay">
-    <section class="popup__window">
-      <button class="popup__close-button"></button>
-      <form class="popup__form">
+  <section class="popup popup__opened">
+    <div class="popup__window">
+      <button type="close" class="popup__close-button"></button>
+      <form class="popup__form" name="user-form">
         <h3 class="popup__title">Редактировать профиль</h3>
-        <input type="text" name="user-name" class="popup__user-name">
-        <input type="text" name="user-job" class="popup__user-job">
+        <input type="text" name="user-name" class="popup__user-name popup__form-input" aria-label="Ваше имя" >
+        <input type="text" name="user-job" class="popup__user-job popup__form-input" aria-label="Ваша профессия">
         <button type="submit" class="popup__save-button">Сохранить</button>
       </form>
-    </section>
+    </div>
   </section>
 </body>
 
