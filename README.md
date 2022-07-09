@@ -13,6 +13,3 @@
 * Файловая организация BEM
 * Адаптив под разные разрешения экранов
 ---
-## 
-**Ссылка на GitHub Pages**
-*[Ссылка на GitHub Pages](https://iceamd.github.io/mesto-project-B-B/)
