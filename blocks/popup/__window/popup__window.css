@@ -7,8 +7,8 @@
   margin: 0 auto 0;
 }
 
-@media (max-width: 320px) {
-  .popup__window {
-    width: 282px;
-  }
+@media (max-width: 680px) {
+	.popup__window {
+		width: 282px;
+	}
 }

@@ -12,7 +12,7 @@
   padding-bottom: 13px;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 680px) {
   .popup__form-input {
     max-width: 238px;
   }

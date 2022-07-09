@@ -22,3 +22,14 @@
 		grid-template-rows: 140px 1fr 50px;
 	}
 }
+
+@media (min-width: 681px) and (max-width:879px){
+	.profile {
+		max-width: 680px; 
+		grid-template-areas: 
+		"profile__avatar profile__info edit-profile profile__add-button"
+		"profile__avatar profile__info edit-profile profile__add-button";
+		grid-template-columns: 150px 312px 1fr 150px;
+		grid-template-rows: 77px 1fr;
+	}
+}

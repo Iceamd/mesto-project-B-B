@@ -1,16 +1,10 @@
 .profile__edit-profile {
-	margin-top: 37px;
+  margin-top: 37px;
   padding: 0;
 }
 
-@media (max-width: 740px) {
-	.profile__edit-profile {
-		margin-top: 36px;
-	}
-}
-
 @media (max-width: 680px) {
-	.profile__edit-profile {
-		margin-top: 8px;
-	}
+  .profile__edit-profile {
+    margin-top: 8px;
+  }
 }
