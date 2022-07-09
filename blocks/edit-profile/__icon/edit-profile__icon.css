@@ -3,3 +3,8 @@
   margin: auto;
 }
 
+@media (max-width: 680px) {
+  .edit-profile__icon {
+    width: 7.5px;
+  }
+}
