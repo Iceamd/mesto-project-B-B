@@ -1,4 +1,4 @@
-.popup__close-button {
+.popup__close{
   position: absolute;
   cursor: pointer;
   width: 40px;
@@ -9,7 +9,7 @@
   background: none;
 }
 
-.popup__close-button::before {
+.popup__close::before {
   position: absolute;
   content: '';
   height: 37px;
@@ -18,7 +18,7 @@
   transform: rotate(45deg);
 }
 
-.popup__close-button::after {
+.popup__close::after {
   position: absolute;
   content: '';
   height: 37px;
@@ -28,17 +28,17 @@
 }
 
 @media (max-width: 680px) {
-  .popup__close-button {
+  .popup__close {
     right: -9px;
     top: -37px;
   }
 
-  .popup__close-button::before {
+  .popup__close::before {
     height: 21px;
     border: 1px solid #fff;
   }
 
-  .popup__close-button::after {
+  .popup__close::after {
     height: 21px;
     border: 1px solid #fff;
   }
