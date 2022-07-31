@@ -1,12 +1,12 @@
 .element__heart {
-  background-image: url(../../../images/Heart.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 22px;
+  padding: 0;
+  min-width: 22px;
   height: 19px;
   border: none;
+  background: transparent url(../../../images/Heart.svg);
+  background-repeat: no-repeat;
   cursor: pointer;
-  background-color: white;
+  transition: all 0.3s linear;
 }
 
 .element__heart:hover {

@@ -32,6 +32,11 @@
     </section>
 
     <section class="elements">
+      <h2 class="elements__title-hidden" hidden>Карточки с фотографиями</h2>
+      <div class="elements__container"></div>
+    </section>
+
+<!-- <section class="elements">
 
       <div class="element">
         <button class="element__delete" type="button"></button>
@@ -85,9 +90,9 @@
           <h2 class="element__text">Карачаево-Ч...</h2>
           <button type="button" class="element__heart element__heart_active" aria-label="нажать на сердце"></button>
         </div>
-      </div>
+      </div> -->
 
-    </section>
+    <!-- </section> --> -->
   </main>
 
   <footer class="footer">
@@ -120,26 +125,26 @@
     </div>
   </section>
 
-  <section class="popup popup_image">
-    <figure class="figure">
-      <button class="popup__close" type="button"></button>
-      <img class="popup__picture" src="#" alt="">
-      <figcaption class="figure__quote figure__quote_view-image"></figcaption>
-    </figure>
-  </section>
+  <div class="popup popup_image">
+      <figure class="figure">
+        <button class="popup__close" type="button"></button>
+        <img class="popup__picture" src="#" alt="">
+        <figcaption class="figure__quote figure__quote_view-image"></figcaption>
+      </figure>
+  </div>
         
-  <template id="cards-element">
+  <template class="element">
     <article class="card">
-      <button class="card__delete-button" type="button"></button>
-      <img class="card__image" src="#" alt="">
-      <div class="card__about">
-        <h2 class="card__info"></h2>
-        <button class="card__like" type="button"></button>
+      <button class="element__delete" type="button"></button>
+      <img class="element__foto"" src="./images/Mountain-Elbrus.jpg" alt="Большая голубая дыра">
+      <div class="element__item">
+        <h2 class="element__text"></h2>
+        <button class="element__heart" type="button"></button>
       </div>
     </article>
   </template>
 
-  <script src="scripts/cards.js"></script>
   <script src="scripts/index.js"></script>
+  <script src="scripts/cards.js"></script>
 </body>
 </html>
