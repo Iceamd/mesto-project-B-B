@@ -1,127 +1,121 @@
-<!DOCTYPE html>
 <html lang="ru">
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./pages/index.css">
-  <title>Место</title>
+  <title>Mesto</title>
+  <meta name="description" content="Страница - учебный проект ЯндексПрактикума">
+  <meta name="keywords" content="ЯндексПрактикум, Mesto, Место">
+  <meta name="author" content="Оксана Сорокина">
 </head>
 
 <body class="page">
 
   <header class="header">
-    <img class="header__logo logo" src="./images/Logo-white.svg" alt="Логотип Место">
+    <img src="./images/Logo-white.svg" alt="лого" class="header__logo">
   </header>
 
   <main class="main">
+
     <section class="profile">
-      <img class="profile__avatar" alt="фото профиля" src="./images/Avatar.jpg">
+      <img src="./images/avatar.jpg" alt="фото профиля" class="profile__avatar">
       <div class="profile__info">
-        <h1 class="profile__title">Жак-Ив Кусто</h1>
-        <p class="profile__subtitle">Исследователь океана</p>
+        <h1 class="profile__name">Жак-Ив Кусто</h1>
+        <p class="profile__description">Исследователь океана</p>
       </div>
-      <button type="button" class="edit-profile profile__edit-profile" aria-label="Редактировать">
+      <button type="button" class=" edit-profile profile__edit-button" aria-label="Редактировать">
         <img src="./images/Edit-Button.svg" alt="Редактировать профиль" class="edit-profile__icon">
       </button>
-
       <button type="button" class="add-button profile__add-button" aria-label="Добавить">
         <img src="./images/Add-Button.svg" alt="Добавить" class="add-button__icon">
       </button>
     </section>
 
-    <!-- <section class="elements">
 
-      <div class="element">
-        <button class="element__delete" type="button"></button>
-        <img class="element__foto" alt="замок" src="./images/lock.jpg">
-        <div class="element__item">
-          <h2 class="element__text">Карачаевск</h2>
-          <button type="button" class="element__heart element__heart_active" aria-label="нажать на сердце"></button>
-        </div>
-      </div>
+    <section>
+      <ul class="elements">
 
-      <div class="element">
-        <button class="element__delete" type="button"></button>
-        <img class="element__foto" alt="гора эльбрус" src="./images/Mountain-Elbrus.jpg">
-        <div class="element__item">
-          <h2 class="element__text">Гора Эльбрус</h2>
-          <button type="button" class="element__heart element__heart_active" aria-label="нажать на сердце"></button>
-        </div>
-      </div>
-
-      <div class="element">
-        <button class="element__delete" type="button"></button>
-        <img class="element__foto" alt="домбай" src="./images/Dombai.jpg">
-        <div class="element__item">
-          <h2 class="element__text">Домбай</h2>
-          <button type="button" class="element__heart element__heart_active" aria-label="нажать на сердце"></button>
-        </div>
-      </div>
-
-      <div class="element">
-        <button class="element__delete" type="button"></button>
-        <img class="element__foto" alt="гора эльбрус" src="./images/Mountain-Elbrus.jpg">
-        <div class="element__item">
-          <h2 class="element__text">Домбай</h2>
-          <button type="button" class="element__heart element__heart_active" aria-label="нажать на сердце"></button>
-        </div>
-      </div>
-
-      <div class="element">
-        <button class="element__delete" type="button"></button>
-        <img class="element__foto" alt="домбай" src="./images/Dombai.jpg">
-        <div class="element__item">
-          <h2 class="element__text">Домбай</h2>
-          <button type="button" class="element__heart element__heart_active" aria-label="нажать на сердце"></button>
-        </div>
-      </div>
-
-      <div class="element">
-        <button class="element__delete" type="button"></button>
-        <img class="element__foto" alt="замок" src="./images/lock.jpg">
-        <div class="element__item">
-          <h2 class="element__text">Карачаево-Ч...</h2>
-          <button type="button" class="element__heart element__heart_active" aria-label="нажать на сердце"></button>
-        </div>
-      </div>
-
-    </section> -->
+        <!-- <li class="element">
+          <img src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg" alt="фото Иваново"
+            class="element__foto">
+          <button type="button" class="element__delete">
+          </button>
+          <div class="element__item">
+            <h2 class="element__text">Иваново</h2>
+            <button type="button" class="element__heart">
+            </button>
+          </div>
+        </li>
+        <li class="element">
+          <img src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg"
+            alt="фото Камчатка" class="element__foto">
+          <button type="button" class="element__delete">
+          </button>
+          <div class="element__item">
+            <h2 class="element__text">Камчатка</h2>
+            <button type="button" class="element__heart">
+            </button>
+          </div>
+        </li>
+        <li class="element">
+          <img src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg"
+            alt="фото Холмогорский район" class="element__foto">
+          <button type="button" class="element__delete">
+          </button>
+          <div class="element__item">
+            <h2 class="element__text">Холмогорский район</h2>
+            <button type="button" class="element__heart">
+            </button>
+          </div>
+        </li>
+        <li class="element">
+          <img src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg" alt="фото Байкал"
+            class="element__foto">
+          <button type="button" class="element__delete">
+          </button>
+          <div class="element__item">
+            <h2 class="element__text">Байкал</h2>
+            <button type="button" class="element__heart">
+            </button>
+          </div>
+        </li> -->
+      </ul>
+    </section>
   </main>
 
   <footer class="footer">
-    <p class="footer__copyright">&#64; 2020 Mesto Russia</p>
+    <p class="footer__copyright">©&nbsp;2022 Mesto Russia</p>
   </footer>
 
-  <section class="popup popup_edit-profile">
+
+  <div class="popup" id="popup-profile">
     <div class="popup__container">
-      <button class="popup__close" type="button"></button>
-      <form class="popup__form" name="profile-action">
+      <button type="button" class="popup__close"></button>
+      <form class="popup__form" name="mesto-profile">
         <h3 class="popup__title">Редактировать профиль</h3>
-        <input type="text" name="name" class="popup__form-input" aria-label="Ваше имя" placeholder="Имя" value required>
-        <input type="text" name="job" class="popup__form-input" aria-label="Ваша профессия" placeholder="Ваша профессия"
-          value required>
-        <button type="submit" class="popup__button">Сохранить</button>
+        <input type="text" class="popup__form-input" id="popup-name" placeholder="Имя">
+        <input type="text" class="popup__form-input" id="popup-description" placeholder="О себе">
+        <button type="submit" class="popup__button">Сохранить
+        </button>
       </form>
     </div>
-  </section>
+  </div>
 
-  <section class="popup popup_add-card">
+  <div class="popup" id="popup-card">
     <div class="popup__container">
-      <button class="popup__close" type="button"></button>
-      <form class="popup__form" name="card-action">
+      <button type="button" class="popup__close" id="card-close">
+      </button>
+      <form class="popup__form" name="mesto-form">
         <h3 class="popup__title">Новое место</h3>
-        <input type="text" name="text" class="popup__form-input" aria-label="Название" placeholder="Название" value
-          required>
-        <input type="text" name="url" class="popup__form-input" aria-label="Ссылка на картинку"
-          placeholder="Ссылка на картинку" value required>
+        <input type="text" class="popup__form-input" id="popup-name-card" placeholder="Название">
+        <input type="text" class="popup__form-input" id="popup-image" placeholder="Ссылка на картинку">
         <button type="submit" class="popup__button">Сохранить</button>
       </form>
     </div>
-  </section>
+  </div>
 
-  <div class="popup popup-image">
+  <div class="popup popur-image" id="popup-big-image">
     <figure class="popup-image__figure">
       <button type="button" class="popup__close" id="image-close">
       </button>
@@ -130,20 +124,22 @@
       </figcaption>
     </figure>
   </div>
-  
-  <template id="elements">
-    <div class="element">
-      <button class="element__delete" type="button"></button>
-      <img class="element__foto" alt="гора эльбрус" src="./images/Mountain-Elbrus.jpg">
+
+  <template id="card-template">
+    <li class="element">
+      <img src="./images/elememts-karachaevsk.jpg" alt="фото Карачаевска" class="element__foto">
+      <button type="button" class="element__delete">
+      </button>
       <div class="element__item">
-        <h2 class="element__text">Гора Эльбрус</h2>
-        <button type="button" class="element__heart" aria-label="нажать на сердце"></button>
+        <h2 class="element__text">Карачаевск</h2>
+        <button type="button" class="element__heart">
+        </button>
       </div>
-    </div>
+    </li>
   </template>
 
-  <script src="scripts/cards.js"></script>
-  <script src="scripts/index.js"></script>
+  <script src="./scripts/cards.js"></script>
+  <script src="./scripts/index.js"></script>
 </body>
 
 </html>
