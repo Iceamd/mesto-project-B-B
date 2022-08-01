@@ -31,12 +31,7 @@
       </button>
     </section>
 
-    <section class="elements">
-      <h2 class="elements__title-hidden" hidden>Карточки с фотографиями</h2>
-      <div class="elements__container"></div>
-    </section>
-
-<!-- <section class="elements">
+    <!-- <section class="elements">
 
       <div class="element">
         <button class="element__delete" type="button"></button>
@@ -90,9 +85,9 @@
           <h2 class="element__text">Карачаево-Ч...</h2>
           <button type="button" class="element__heart element__heart_active" aria-label="нажать на сердце"></button>
         </div>
-      </div> -->
+      </div>
 
-    <!-- </section> --> -->
+    </section> -->
   </main>
 
   <footer class="footer">
@@ -105,8 +100,8 @@
       <form class="popup__form" name="profile-action">
         <h3 class="popup__title">Редактировать профиль</h3>
         <input type="text" name="name" class="popup__form-input" aria-label="Ваше имя" placeholder="Имя" value required>
-        <input type="text" name="job" class="popup__form-input" aria-label="Ваша профессия"
-          placeholder="Ваша профессия" value required>
+        <input type="text" name="job" class="popup__form-input" aria-label="Ваша профессия" placeholder="Ваша профессия"
+          value required>
         <button type="submit" class="popup__button">Сохранить</button>
       </form>
     </div>
@@ -117,7 +112,8 @@
       <button class="popup__close" type="button"></button>
       <form class="popup__form" name="card-action">
         <h3 class="popup__title">Новое место</h3>
-        <input type="text" name="text" class="popup__form-input" aria-label="Название" placeholder="Название" value required>
+        <input type="text" name="text" class="popup__form-input" aria-label="Название" placeholder="Название" value
+          required>
         <input type="text" name="url" class="popup__form-input" aria-label="Ссылка на картинку"
           placeholder="Ссылка на картинку" value required>
         <button type="submit" class="popup__button">Сохранить</button>
@@ -125,26 +121,29 @@
     </div>
   </section>
 
-  <div class="popup popup_image">
-      <figure class="figure">
-        <button class="popup__close" type="button"></button>
-        <img class="popup__picture" src="#" alt="">
-        <figcaption class="figure__quote figure__quote_view-image"></figcaption>
-      </figure>
+  <div class="popup popup-image">
+    <figure class="popup-image__figure">
+      <button type="button" class="popup__close" id="image-close">
+      </button>
+      <img src="URL" alt="иллюстрация" class="popup-image__picture">
+      <figcaption class="popup-image__caption">
+      </figcaption>
+    </figure>
   </div>
-        
-  <template class="element">
-    <article class="card">
+  
+  <template id="elements">
+    <div class="element">
       <button class="element__delete" type="button"></button>
-      <img class="element__foto"" src="./images/Mountain-Elbrus.jpg" alt="Большая голубая дыра">
+      <img class="element__foto" alt="гора эльбрус" src="./images/Mountain-Elbrus.jpg">
       <div class="element__item">
-        <h2 class="element__text"></h2>
-        <button class="element__heart" type="button"></button>
+        <h2 class="element__text">Гора Эльбрус</h2>
+        <button type="button" class="element__heart" aria-label="нажать на сердце"></button>
       </div>
-    </article>
+    </div>
   </template>
 
-  <script src="scripts/index.js"></script>
   <script src="scripts/cards.js"></script>
+  <script src="scripts/index.js"></script>
 </body>
+
 </html>
