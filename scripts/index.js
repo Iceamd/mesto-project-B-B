@@ -1,12 +1,11 @@
 
 const popupProfile = document.querySelector('#popup-profile');
-const btnPopupClose = popupProfile.querySelector('.popup__close');
+const profileCloseBtn = popupProfile.querySelector('.popup__close');
 const popupName = popupProfile.querySelector('#popup-name');
 const popupDescription = popupProfile.querySelector('#popup-description');
 const profileName = document.querySelector('.profile__name');
 const profileDescription = document.querySelector('.profile__description');
-const popupButton = document.querySelector('.popup__button');
-const popupForm = popupProfile.querySelector('.popup__form');
+const profileForm = popupProfile.querySelector('.popup__form');
 const cardElements = document.querySelectorAll('.element');
 
 const imageClose = document.querySelector('#image-close');
@@ -15,7 +14,7 @@ const popupPicture = popupImage.querySelector('.popup-image__picture');
 const popupCaption = popupImage.querySelector('.popup-image__caption');
 
 
-const btnPopupOpen = document.querySelector('.profile__edit-button');
+const profileOpenBtn = document.querySelector('.profile__edit-button');
 
 function openPopup(popup) {
     popup.classList.add('popup_opened');
@@ -25,19 +24,19 @@ function closePopup(popup) {
     popup.classList.remove('popup_opened');
 }
 
-btnPopupOpen.addEventListener('click', function (evn) {
+profileOpenBtn.addEventListener('click', function (evn) {
     openPopup(popupProfile);
     popupName.value = profileName.textContent;
     popupDescription.value = profileDescription.textContent;
 })
 
 
-btnPopupClose.addEventListener('click', function (evn) {
+profileCloseBtn.addEventListener('click', function (evn) {
     closePopup(popupProfile);
 })
 
 
-popupForm.addEventListener('submit', function (evn) {
+profileForm.addEventListener('submit', function (evn) {
     profileName.textContent = popupName.value;
     profileDescription.textContent = popupDescription.value;
     evn.preventDefault();
@@ -60,10 +59,6 @@ const elements = document.querySelector('.elements');
 
 profileButton.addEventListener('click', function (evn) {
     openPopup(popupCard);
-
-    popupNameCard.value = '';
-    popupImageCard.value = '';
-
 })
 
 
@@ -71,14 +66,15 @@ btnPopupCardClose.addEventListener('click', function (evn) {
     closePopup(popupCard);
 })
 
-
+//не понимаю как добавить closet(
 function removeCard(evn) {
     const localTrash = evn.target;
     const localCard = localTrash.parentElement;
     localCard.remove();
 }
 
-function addLike(evn) {
+
+function toggleLike (evn) {
     const localLike = evn.target;
     localLike.classList.toggle('element__heart_active');
 }
@@ -109,7 +105,7 @@ function createCard(descr, img) {
 
 
     const localLike = newCard.querySelector('.element__heart');
-    localLike.addEventListener('click', addLike);
+    localLike.addEventListener('click', toggleLike);
 
 
     const localPicture = newCard.querySelector('.element__foto');
@@ -119,14 +115,16 @@ function createCard(descr, img) {
 }
 
 
-popupFormCard.addEventListener('submit', function (evn) {
+
+popupFormCard.addEventListener("submit", function (evn) {
     const newCard = createCard(popupNameCard.value, popupImageCard.value);
     elements.prepend(newCard);
+    evn.preventDefault();
+    closePopup(popupCard);
+});
 
 
-evn.preventDefault();
-closePopup(popupCard);
-})
+
 
 initialCards.forEach(card => {
     const newCard = createCard(card.name, card.link);
