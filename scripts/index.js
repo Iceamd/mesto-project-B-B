@@ -57,22 +57,20 @@ const elements = document.querySelector('.elements');
 
 
 
-profileButton.addEventListener('click', function (evn) {
+profileButton.addEventListener('click', function (evt) {
     openPopup(popupCard);
 })
 
 
-btnPopupCardClose.addEventListener('click', function (evn) {
+btnPopupCardClose.addEventListener('click', function (evt) {
     closePopup(popupCard);
 })
 
-//не понимаю как добавить closet(
 function removeCard(evn) {
     const localTrash = evn.target;
-    const localCard = localTrash.parentElement;
+    const localCard = localTrash.closest('.element')
     localCard.remove();
 }
-
 
 function toggleLike (evn) {
     const localLike = evn.target;
@@ -81,8 +79,11 @@ function toggleLike (evn) {
 
 function showImage(evn) {
     const link = evn.target.getAttribute('src');
+    popupCaption.textContent = title.textContent;
     popupPicture.setAttribute('src', link);
-    const title = evn.target.parentElement.querySelector('.element__text');
+    popupPicture.setAttribute('alt', title.textContent); 
+    const card = evn.target.closest('.element');
+    const title = card.querySelector('.element__text');
     popupCaption.textContent = title.textContent;
     openPopup(popupImage);
 }
@@ -121,8 +122,8 @@ popupFormCard.addEventListener("submit", function (evn) {
     elements.prepend(newCard);
     evn.preventDefault();
     closePopup(popupCard);
+    evt.target.reset()
 });
-
 
 
 
