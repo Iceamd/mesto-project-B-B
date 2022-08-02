@@ -66,25 +66,24 @@ btnPopupCardClose.addEventListener('click', function (evt) {
     closePopup(popupCard);
 })
 
-function removeCard(evn) {
+function removeCard(evt) {
     const localTrash = evn.target;
     const localCard = localTrash.closest('.element')
     localCard.remove();
 }
 
-function toggleLike (evn) {
+function toggleLike (evt) {
     const localLike = evn.target;
     localLike.classList.toggle('element__heart_active');
 }
 
-function showImage(evn) {
-    const link = evn.target.getAttribute('src');
-    popupCaption.textContent = title.textContent;
-    popupPicture.setAttribute('src', link);
-    popupPicture.setAttribute('alt', title.textContent); 
-    const card = evn.target.closest('.element');
+function showImage(evt) {
+    const card = evt.target.closest('.element')
     const title = card.querySelector('.element__text');
     popupCaption.textContent = title.textContent;
+    const link = evt.target.getAttribute('src');
+    popupPicture.setAttribute('src', link);
+    popupPicture.setAttribute('alt', title.textContent);
     openPopup(popupImage);
 }
 
