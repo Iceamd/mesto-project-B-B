@@ -67,13 +67,13 @@ btnPopupCardClose.addEventListener('click', function (evt) {
 })
 
 function removeCard(evt) {
-    const localTrash = evn.target;
+    const localTrash = evt.target;
     const localCard = localTrash.closest('.element')
     localCard.remove();
 }
 
 function toggleLike (evt) {
-    const localLike = evn.target;
+    const localLike = evt.target;
     localLike.classList.toggle('element__heart_active');
 }
 
@@ -121,7 +121,7 @@ popupFormCard.addEventListener("submit", function (evn) {
     elements.prepend(newCard);
     evn.preventDefault();
     closePopup(popupCard);
-    evt.target.reset()
+    evn.target.reset()
 });
 
 
